@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Uniquely Strange Caregivers | Home Care in Houston, TX | Bridging the Gap</title>
+
+<meta name="description" content="Uniquely Strange Caregivers provides compassionate non-medical in-home care in Houston, TX. Companion care, personal care, respite care & special needs support. Call (832) 264-1443 for a free consultation.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://YOURDOMAIN.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uniquely Strange Caregivers | Home Care in Houston, TX">
+<meta property="og:description" content="Compassionate non-medical in-home care in Houston, TX. Free consultation available.">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg">
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Uniquely Strange Caregivers",
+  "telephone": "+1-832-264-1443",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Houston",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "areaServed": "Houston, TX",
+  "url": "https://YOURDOMAIN.com/"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--blue:#4A7C9B;--orange:#E8923F;--cream:#F5F2ED;--charcoal:#3D4852
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito Sans',sans-serif;line-height:1.7;color:var(--charcoal)}
+h1,h2,h3{font-family:'Cormorant Garamond',serif}
+a{text-decoration:none}
+img{max-width:100%;display:block}
+
+header{padding:1rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:4rem;background:var(--cream)}
+.hero img{width:100%;height:420px;object-fit:cover;border-radius:16px}
+.btn{padding:1rem 2rem;border-radius:8px;font-weight:700}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-secondary{border:2px solid var(--blue);color:var(--blue)}
+section{padding:4rem 2rem}
+footer{background:#1a1a1a;color:#ccc;padding:3rem}
+footer a{color:#ccc}
+.mobile-cta{position:fixed;bottom:0;left:0;right:0;background:var(--blue);padding:1rem;text-align:center}
+.mobile-cta a{color:#fff;font-weight:700}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Uniquely Strange Caregivers" height="60">
+  <a href="tel:+18322641443"><strong>(832) 264-1443</strong></a>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Personalized Home Care for People Who Deserve to Be Understood</h1>
+    <p><em>Bridging the Gap</em></p>
+    <p>Compassionate non-medical in-home care so families can work with peace of mind.</p><br>
+    <a href="tel:+18322641443" class="btn btn-primary">Call Free Consultation</a>
+    <a href="#consultation" class="btn btn-secondary">Request Info</a>
+  </div>
+  <img src="hero.jpg" alt="In-home caregiver support in Houston TX">
+</section>
+
+<section>
+<h2>Who We Serve</h2>
+<ul>
+<li>Seniors aging at home</li>
+<li>Adults with disabilities</li>
+<li>Families needing respite care</li>
+</ul>
+</section>
+
+<section>
+<h2>Our Services</h2>
+<ul>
+<li>Companionship</li>
+<li>Personal care</li>
+<li>Meal preparation</li>
+<li>Light housekeeping</li>
+<li>Medication reminders</li>
+<li>Transportation</li>
+</ul>
+</section>
+
+<section id="consultation">
+<h2>Request a Free Consultation</h2>
+
+<form id="consultation-form">
+<input type="text" name="website" style="display:none">
+
+<input required placeholder="Full Name" id="name"><br><br>
+<input required placeholder="Phone" id="phone"><br><br>
+<input required type="email" placeholder="Email" id="email"><br><br>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+<div id="form-status" style="margin-top:1rem;font-weight:700"></div>
+</form>
+</section>
+
+<footer>
+<p><strong>Uniquely Strange Caregivers</strong></p>
+<p>Houston, TX</p>
+<p><a href="mailto:info@uniquelystrangecaregivers.com">info@uniquelystrangecaregivers.com</a></p>
+<p>&copy; 2025</p>
+</footer>
+
+<div class="mobile-cta">
+<a href="tel:+18322641443">Call Now – Free Consultation</a>
+</div>
+
+<script>
+const MAKE_WEBHOOK_URL = 'PASTE_MAKE_WEBHOOK_URL_HERE';
+
+document.getElementById('consultation-form').addEventListener('submit', async e=>{
+e.preventDefault();
+
+if(document.querySelector('input[name="website"]').value) return;
+
+const status=document.getElementById('form-status');
+status.textContent='Sending...';
+
+const data={
+name:document.getElementById('name').value,
+phone:document.getElementById('phone').value,
+email:document.getElementById('email').value,
+source:'website'
+};
+
+try{
+await fetch(MAKE_WEBHOOK_URL,{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify(data)
+});
+status.textContent='Thank you! We will contact you shortly.';
+e.target.reset();
+}catch{
+status.textContent='Submission failed. Please call (832) 264-1443.';
+}
+});
+</script>
+
+</body>
+</html>
