@@ -160,7 +160,22 @@ e.target.reset();
 status.textContent='Submission failed. Please call (832) 264-1443.';
 }
 });
-</script>
+</script><!-- === HERO IMAGE PATCH (DROP-IN) === -->
+<style>
+  .hero-image-main {
+    background-image: url('hero.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 420px;
+  }
+
+  .hero-image-placeholder {
+    display: none !important;
+  }
+</style>
+<!-- === END HERO IMAGE PATCH === -->
+
 
 </body>
 </html>
