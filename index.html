@@ -1,188 +1,458 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Uniquely Strange Caregivers | Compassionate Home Care in Houston</title>
-  <meta name="description" content="Uniquely Strange Caregivers provides personalized, compassionate home care, respite care and specialized support services for families in Houston and surrounding areas. Trusted caregivers, flexible scheduling and peace of mind." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://uniquelystrangecaregivers.care/" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Uniquely Strange Caregivers | Compassionate Home Care in Houston" />
-  <meta property="og:description" content="Personalized, compassionate caregivers offering home care, respite care and specialized support in Houston, TX." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://uniquelystrangecaregivers.care/" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Uniquely Strange Caregivers",
-    "url": "https://uniquelystrangecaregivers.care",
-    "telephone": "+1-713-555-1234",
-    "areaServed": ["Houston, TX","Sugar Land, TX","Katy, TX","The Woodlands, TX"],
-    "description": "Personalized, compassionate home care, respite care and specialized caregiving services.",
-    "sameAs": []
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uniquely Strange Caregivers - Bridging the Gap. Personalized non-medical home care for seniors and adults with special needs in Houston, TX. Call (832) 264-1443 for a free consultation.">
+    <meta name="keywords" content="home care Houston, senior care Houston, caregiver Houston, companion care, personal care, respite care, non-medical home care">
+    <title>Uniquely Strange Caregivers | Bridging the Gap | Houston Home Care</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --blue: #4A7C9B;
+            --blue-dark: #3A6A87;
+            --blue-light: #6A9CBD;
+            --orange: #E8923F;
+            --orange-dark: #D07D2F;
+            --orange-light: #F4A85F;
+            --cream: #F5F2ED;
+            --cream-dark: #EBE6DE;
+            --white: #FFFFFF;
+            --charcoal: #3D4852;
+            --charcoal-light: #5A6570;
+            --warm-gray: #6B7280;
+            --border-light: rgba(0,0,0,0.06);
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--white); color: var(--charcoal); line-height: 1.7; font-size: 16px; }
+        h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 500; line-height: 1.25; color: var(--charcoal); }
+        h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+        p { color: var(--charcoal-light); }
+
+        .top-bar { background: var(--charcoal); color: var(--white); padding: 0.5rem 1rem; font-size: 0.875rem; }
+        .top-bar-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .top-bar a { color: var(--orange-light); text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { color: var(--white); }
+
+        .header { background: var(--white); padding: 1rem 1.5rem; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); }
+        .header-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 70px; width: auto; }
+        .header-phone-label { font-size: 0.75rem; color: var(--warm-gray); text-transform: uppercase; letter-spacing: 0.05em; }
+        .header-phone-number { font-size: 1.25rem; font-weight: 700; color: var(--blue-dark); text-decoration: none; }
+        .header-phone-number:hover { color: var(--orange); }
+
+        .hero { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); padding: 4rem 1.5rem; position: relative; overflow: hidden; }
+        .hero-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .hero-text h1 { margin-bottom: 1.5rem; }
+        .hero-text h1 .orange { color: var(--orange); }
+        .hero-subtitle { font-size: 1.25rem; margin-bottom: 1rem; max-width: 500px; }
+        .hero-tagline { font-size: 1.5rem; font-weight: 600; color: var(--blue); margin-bottom: 2rem; font-family: var(--font-display); font-style: italic; }
+        .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); color: var(--white); box-shadow: var(--shadow-md); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-secondary { background: var(--white); color: var(--charcoal); border: 2px solid var(--border-light); }
+        .btn-secondary:hover { border-color: var(--blue); color: var(--blue-dark); }
+
+        .hero-image-main { 
+            width: 100%; 
+            height: 450px; 
+            border-radius: 20px; 
+            overflow: hidden;
+            box-shadow: var(--shadow-xl); 
+        }
+        .hero-image-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .trust-bar { background: var(--white); padding: 1.5rem; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+        .trust-bar-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 0.75rem; }
+        .trust-icon { width: 40px; height: 40px; background: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        .trust-text { font-weight: 600; color: var(--charcoal); font-size: 0.9rem; }
+
+        .section { padding: 5rem 1.5rem; }
+        .section-white { background: var(--white); }
+        .section-cream { background: var(--cream); }
+        .section-content { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header h2 { margin-bottom: 1rem; }
+        .section-header p { font-size: 1.125rem; }
+        .section-label { display: inline-block; background: linear-gradient(135deg, var(--blue) 0%, var(--orange) 100%); color: var(--white); padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+
+        .bridge-concept { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%); padding: 4rem 1.5rem; color: var(--white); text-align: center; }
+        .bridge-concept h2 { color: var(--white); margin-bottom: 1.5rem; }
+        .bridge-concept > p { color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto; font-size: 1.25rem; }
+        .bridge-items { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; max-width: 900px; margin: 3rem auto 0; }
+        .bridge-side { text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; }
+        .bridge-side h3 { color: var(--white); margin-bottom: 0.5rem; }
+        .bridge-side p { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+        .bridge-center { font-size: 4rem; color: var(--orange); }
+
+        .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .help-card { background: var(--white); border-radius: 16px; padding: 2rem; text-align: center; box-shadow: var(--shadow-md); transition: all 0.3s ease; border: 1px solid var(--border-light); }
+        .help-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .help-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .help-card h3 { margin-bottom: 0.75rem; color: var(--blue-dark); }
+        .help-card p { font-size: 0.95rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .service-card { display: flex; gap: 1.25rem; padding: 1.5rem; background: var(--white); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); transition: all 0.3s ease; }
+        .service-card:hover { box-shadow: var(--shadow-md); border-color: var(--blue-light); }
+        .service-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .service-card h4 { font-family: var(--font-body); font-weight: 700; margin-bottom: 0.25rem; color: var(--charcoal); }
+        .service-card p { font-size: 0.9rem; }
+
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .why-card { text-align: center; }
+        .why-icon { width: 70px; height: 70px; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; }
+        .why-card h4 { font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem; }
+        .why-card p { font-size: 0.9rem; }
+
+        .consultation-section { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); }
+        .consultation-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .consultation-form { background: var(--white); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-lg); }
+        .consultation-form h3 { margin-bottom: 0.5rem; }
+        .consultation-form > p { margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--charcoal); font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--border-light); border-radius: 8px; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s ease; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--blue); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit { width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); color: var(--white); border: none; border-radius: 8px; font-family: var(--font-body); font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+        .final-cta { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); padding: 4rem 1.5rem; text-align: center; color: var(--white); }
+        .final-cta h2 { color: var(--white); margin-bottom: 1rem; }
+        .final-cta p { color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.25rem; }
+        .final-cta-phone { font-size: 2.5rem; font-weight: 700; }
+
+        .footer { background: var(--charcoal); color: var(--white); padding: 3rem 1.5rem 1.5rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-about img { height: 60px; margin-bottom: 1rem; }
+        .footer-about p { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem; }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: background 0.3s ease; }
+        .footer-social a:hover { background: var(--orange); }
+        .footer h4 { font-family: var(--font-body); font-weight: 700; margin-bottom: 1rem; font-size: 1rem; }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 0.5rem; }
+        .footer a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+        .footer a:hover { color: var(--orange); }
+        .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+
+        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--orange); padding: 1rem; z-index: 999; }
+        .mobile-cta a { display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text { order: 1; }
+            .hero-image { order: 0; }
+            .hero-ctas { justify-content: center; }
+            .help-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .consultation-content { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .bridge-items { grid-template-columns: 1fr; gap: 1rem; }
+            .bridge-center { order: -1; }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-content { justify-content: center; text-align: center; }
+            .header-content { flex-direction: column; gap: 1rem; }
+            .why-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-about { text-align: center; }
+            .footer-social { justify-content: center; }
+            .mobile-cta { display: block; }
+            body { padding-bottom: 70px; }
+            .hero-image-main { height: 300px; }
+        }
+    </style>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap nav">
-      <a class="brand" href="index.html">
-        <span class="dot"></span>
-        <span>UNIQUELY STRANGE CAREGIVERS</span>
-      </a>
-      <nav class="links">
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html" class="btn">Contact</a>
-      </nav>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span>🌉 Serving Greater Houston, TX — Licensed, Insured & Background-Checked</span>
+            <span>Call Now: <a href="tel:+18322641443">(832) 264-1443</a></span>
+        </div>
     </div>
-  </header>
-  <main id="top">
+
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Uniquely Strange Caregivers - Bridging the Gap">
+            </a>
+            <div class="header-phone">
+                <div>
+                    <div class="header-phone-label">Free Consultation</div>
+                    <a href="tel:+18322641443" class="header-phone-number">(832) 264-1443</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <section class="hero">
-      <div class="wrap heroGrid">
-        <div>
-          <h1>Compassionate Care that Celebrates the Unique</h1>
-          <p class="sub">
-            Providing personalized home care, respite services and companionship tailored to your loved one's unique needs. Our dedicated caregivers bring peace of mind to families across Houston.
-          </p>
-          <div class="ctaRow">
-            <a class="btn big" href="contact.html#quote">Get Started</a>
-            <a class="ghost big" href="tel:+17135551234">Call: (713) 555‑1234</a>
-          </div>
-          <ul class="bullets">
-            <li>Licensed & insured caregivers</li>
-            <li>Flexible scheduling (hourly to full-time)</li>
-            <li>Specialized support (memory care, mobility assistance)</li>
-          </ul>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Personalized Home Care for People Who Deserve to Be <span class="orange">Understood</span></h1>
+                <p class="hero-tagline">Bridging the Gap</p>
+                <p class="hero-subtitle">We bridge the gap so families can work with peace of mind, and patients can enjoy comfort and quality of life at home.</p>
+                <div class="hero-ctas">
+                    <a href="tel:+18322641443" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call for Free Consultation
+                    </a>
+                    <a href="#consultation" class="btn btn-secondary">Request Information</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-main">
+                    <img src="hero-image.jpg" alt="Caring hands - Uniquely Strange Caregivers providing compassionate home care">
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h2>Request Information</h2>
-          <p class="small">We’ll respond promptly with details and next steps.</p>
-          <!-- Form using Formspree (replace YOUR_FORM_ID) -->
-          <form id="quote" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label>
-              Name
-              <input name="name" required autocomplete="name" />
-            </label>
-            <label>
-              Phone
-              <input name="phone" required autocomplete="tel" />
-            </label>
-            <label>
-              Email (optional)
-              <input name="email" type="email" autocomplete="email" />
-            </label>
-            <label>
-              City / Neighborhood
-              <input name="location" required />
-            </label>
-            <label>
-              What kind of care are you seeking?
-              <textarea name="details" rows="4" required></textarea>
-            </label>
-            <input type="hidden" name="source" value="uniquelystrangecaregivers.care" />
-            <button class="btn big full" type="submit">Send Request</button>
-            <p class="tiny">
-              Prefer to talk now? Call <a href="tel:+17135551234">(713) 555‑1234</a>
-            </p>
-          </form>
-        </div>
-      </div>
     </section>
-    <section id="services" class="section">
-      <div class="wrap">
-        <h2>Our Services</h2>
-        <div class="grid3">
-          <div class="panel">
-            <h3>Home Care Assistance</h3>
-            <p>Personal care, medication reminders, meal prep, light housekeeping and companionship to help your loved one live comfortably at home.</p>
-          </div>
-          <div class="panel">
-            <h3>Respite & Relief Care</h3>
-            <p>Short‑term relief for family caregivers who need a break. We step in so you can rest and recharge, confident your loved one is in good hands.</p>
-          </div>
-          <div class="panel">
-            <h3>Specialized Support</h3>
-            <p>Support for dementia, Alzheimer’s, Parkinson’s and mobility challenges. Our caregivers receive ongoing training to meet unique needs with compassion.</p>
-          </div>
+
+    <section class="trust-bar">
+        <div class="trust-bar-content">
+            <div class="trust-item"><div class="trust-icon">✓</div><span class="trust-text">Licensed</span></div>
+            <div class="trust-item"><div class="trust-icon">🛡️</div><span class="trust-text">Insured</span></div>
+            <div class="trust-item"><div class="trust-icon">✅</div><span class="trust-text">Background-Checked</span></div>
+            <div class="trust-item"><div class="trust-icon">🌉</div><span class="trust-text">Bridging the Gap</span></div>
         </div>
-        <div class="note">
-          Looking for something specific? Our care plans are fully customizable. <a href="contact.html">Contact us</a> to discuss how we can help.
-        </div>
-      </div>
     </section>
-    <section id="process" class="section alt">
-      <div class="wrap">
-        <h2>How It Works</h2>
-        <ol class="steps">
-          <li><strong>Consultation:</strong> We listen to your needs and preferences via phone or in‑person.</li>
-          <li><strong>Care Plan:</strong> We craft a personalized plan and match you with a compatible caregiver.</li>
-          <li><strong>Meet & Start:</strong> We introduce your caregiver and begin services on your schedule.</li>
-          <li><strong>Ongoing Support:</strong> We check in regularly and adjust care as needs evolve.</li>
-        </ol>
-      </div>
-    </section>
-    <section id="reviews" class="section">
-      <div class="wrap">
-        <h2>What Families Say</h2>
-        <div class="grid3">
-          <div class="panel">
-            <p class="quote">“Our caregiver treats Mom with genuine respect and warmth. We finally have peace of mind knowing she’s safe and happy.”</p>
-            <p class="small">— Sarah K.</p>
-          </div>
-          <div class="panel">
-            <p class="quote">“They stepped in when we needed respite. Their flexibility and professionalism have been invaluable.”</p>
-            <p class="small">— David & Lynn</p>
-          </div>
-          <div class="panel">
-            <p class="quote">“The specialized memory care has made such a difference for my dad. Their caregivers truly understand his condition.”</p>
-            <p class="small">— Michelle R.</p>
-          </div>
+
+    <section class="bridge-concept">
+        <h2>Bridging the Gap</h2>
+        <p>We understand that families need to work, and loved ones need quality care. Uniquely Strange Caregivers bridges that gap — providing peace of mind for families and comfort for patients.</p>
+        <div class="bridge-items">
+            <div class="bridge-side">
+                <h3>For Families</h3>
+                <p>Go to work knowing your loved one is safe, cared for, and understood by compassionate professionals.</p>
+            </div>
+            <div class="bridge-center">🌉</div>
+            <div class="bridge-side">
+                <h3>For Patients</h3>
+                <p>Stay comfortable at home with personalized care that honors your routine, dignity, and quality of life.</p>
+            </div>
         </div>
-        <p class="tiny">We’re proud to have earned the trust of dozens of Houston families. Let us know how we can help yours.</p>
-      </div>
     </section>
-    <section class="section alt">
-      <div class="wrap footerGrid">
-        <div>
-          <h2>Ready to Find the Right Care?</h2>
-          <p>Schedule a consultation or fill out our quick form. We’re here to support you and your loved ones.</p>
-          <div class="ctaRow">
-            <a class="btn big" href="tel:+17135551234">Call: (713) 555‑1234</a>
-            <a class="ghost big" href="contact.html#quote">Send Request</a>
-          </div>
+
+    <section class="section section-white">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-label">Who We Serve</span>
+                <h2>Care That Meets You Where You Are</h2>
+                <p>We provide personalized support for individuals and families navigating the journey of care at home.</p>
+            </div>
+            <div class="help-grid">
+                <div class="help-card"><div class="help-icon">👴</div><h3>Seniors Aging at Home</h3><p>Supporting independence and dignity for those who wish to remain in their beloved homes.</p></div>
+                <div class="help-card"><div class="help-icon">💜</div><h3>Adults with Disabilities</h3><p>Specialized care for adults with disabilities or special needs, honoring their unique routines.</p></div>
+                <div class="help-card"><div class="help-icon">👨‍👩‍👧</div><h3>Families Needing Respite</h3><p>Giving family caregivers the break they deserve while ensuring their loved ones receive quality care.</p></div>
+            </div>
         </div>
-        <div class="panel">
-          <h3>Service Areas</h3>
-          <p class="small">Houston • Sugar Land • Katy • The Woodlands • Pearland • Pasadena</p>
-          <h3>Hours</h3>
-          <p class="small">Monday – Sunday: 8am – 8pm</p>
-          <h3>Email</h3>
-          <p class="small"><a href="mailto:care@uniquelystrangecaregivers.care">care@uniquelystrangecaregivers.care</a></p>
-        </div>
-      </div>
     </section>
-  </main>
-  <footer>
-    <div class="wrap">
-      <div>
-        <strong>Uniquely Strange Caregivers</strong><br />
-        Serving Houston and surrounding communities
-      </div>
-      <div>
-        © <span id="year"></span> Uniquely Strange Caregivers. All rights reserved.
-      </div>
+
+    <section class="section section-cream">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2>Comprehensive Non-Medical Home Care</h2>
+                <p>From companionship to personal care, we provide the support your loved one needs to thrive at home.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon">💬</div><div><h4>Companion Care</h4><p>Conversation, emotional support, activities, and meaningful human connection.</p></div></div>
+                <div class="service-card"><div class="service-icon">🛁</div><div><h4>Personal Care</h4><p>Bathing, dressing, grooming, and toileting assistance with dignity and respect.</p></div></div>
+                <div class="service-card"><div class="service-icon">🍽️</div><div><h4>Meal Preparation</h4><p>Nutritious meals prepared according to dietary needs and personal preferences.</p></div></div>
+                <div class="service-card"><div class="service-icon">💊</div><div><h4>Medication Reminders</h4><p>Timely reminders to help maintain medication schedules and health routines.</p></div></div>
+                <div class="service-card"><div class="service-icon">🧹</div><div><h4>Light Housekeeping</h4><p>Laundry, tidying, and maintaining a clean, safe living environment.</p></div></div>
+                <div class="service-card"><div class="service-icon">🚗</div><div><h4>Transportation</h4><p>Safe transportation to appointments, errands, social outings, and more.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-white">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2>What Makes Us Uniquely Different</h2>
+                <p>We believe care should be as unique as the person receiving it.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card"><div class="why-icon">👤</div><h4>Personality Matched</h4><p>We match caregivers based on personality and interests, not just availability.</p></div>
+                <div class="why-card"><div class="why-icon">📋</div><h4>No Long-Term Contracts</h4><p>Flexible scheduling that adapts to your changing needs. Start or stop anytime.</p></div>
+                <div class="why-card"><div class="why-icon">✅</div><h4>Thoroughly Vetted</h4><p>All caregivers are licensed, insured, and pass comprehensive background checks.</p></div>
+                <div class="why-card"><div class="why-icon">❤️</div><h4>Owner-Operated</h4><p>Margaret personally oversees each care plan with hands-on attention.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="section consultation-section">
+        <div class="section-content">
+            <div class="consultation-content">
+                <div>
+                    <span class="section-label">Get Started</span>
+                    <h2>Schedule Your Free Consultation</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Every family's situation is unique. Let's talk about your needs and how we can help bridge the gap for your loved one.</p>
+                    <div style="background: var(--white); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                        <h4 style="margin-bottom: 1rem; color: var(--blue-dark);">What to Expect:</h4>
+                        <ul style="color: var(--charcoal-light); margin-left: 1.25rem;">
+                            <li style="margin-bottom: 0.5rem;">A caring conversation about your situation</li>
+                            <li style="margin-bottom: 0.5rem;">No pressure, no obligation</li>
+                            <li style="margin-bottom: 0.5rem;">Personalized care recommendations</li>
+                            <li style="margin-bottom: 0.5rem;">Transparent pricing discussion</li>
+                            <li>Answers to all your questions</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 1.25rem;"><strong>Or call us directly:</strong><br><a href="tel:+18322641443" style="color: var(--orange); text-decoration: none; font-size: 1.5rem; font-weight: 700;">(832) 264-1443</a></p>
+                </div>
+                <form class="consultation-form" id="consultation-form">
+                    <h3>Request Information</h3>
+                    <p>Fill out the form and we'll contact you within 24 hours.</p>
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="care-type">Type of Care Needed</label>
+                        <select id="care-type" name="care-type">
+                            <option value="">Select an option...</option>
+                            <option value="Companionship">Companionship Care</option>
+                            <option value="Personal Care">Personal Care</option>
+                            <option value="Respite">Respite Care</option>
+                            <option value="Special Needs">Special Needs Care</option>
+                            <option value="Not Sure">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Situation</label>
+                        <textarea id="message" name="message" placeholder="Share any details that would help us understand your needs..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Request Free Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2>Ready to Bridge the Gap?</h2>
+            <p>Let us help you find the perfect care solution for your family. Call today for your free, no-obligation consultation.</p>
+            <a href="tel:+18322641443" class="btn btn-secondary" style="background: var(--white); color: var(--orange); font-size: 1.25rem; padding: 1.25rem 2.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call (832) 264-1443
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <img src="logo.png" alt="Uniquely Strange Caregivers">
+                <p>Bridging the gap with compassionate, personalized non-medical home care. We help families work with peace of mind while ensuring patients enjoy comfort and quality of life.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div><h4>Services</h4><ul><li><a href="#">Companion Care</a></li><li><a href="#">Personal Care</a></li><li><a href="#">Respite Care</a></li><li><a href="#">Special Needs Care</a></li></ul></div>
+            <div><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Our Caregivers</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+            <div><h4>Contact</h4><ul><li><a href="tel:+18322641443">(832) 264-1443</a></li><li><a href="mailto:support@uniquelystrangecaregivers.care">support@uniquelystrangecaregivers.care</a></li><li>Houston, TX</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Uniquely Strange Caregivers. All rights reserved. | Bridging the Gap | Licensed & Insured</p></div>
+    </footer>
+
+    <div class="mobile-cta">
+        <a href="tel:+18322641443">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now — Free Consultation
+        </a>
     </div>
-  </footer>
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+    <script>
+        // =====================================================
+        // UNIQUELY STRANGE CAREGIVERS - LEAD CAPTURE
+        // =====================================================
+        
+        // ⚠️ REPLACE THIS WITH YOUR ACTUAL MAKE.COM WEBHOOK URL
+        const MAKE_WEBHOOK_URL = 'YOUR_MAKE_WEBHOOK_URL_HERE';
+        
+        document.getElementById('consultation-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('name').value.trim();
+            const nameParts = fullName.split(' ');
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.slice(1).join(' ') || '';
+            
+            const formData = {
+                first_name: firstName,
+                last_name: lastName,
+                phone: document.getElementById('phone').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                care_type: document.getElementById('care-type').value || 'Not specified',
+                message: document.getElementById('message').value.trim() || '',
+                source: 'website_form',
+                timestamp: new Date().toISOString()
+            };
+            
+            const phoneDigits = formData.phone.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            const submitBtn = this.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                await fetch(MAKE_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                alert('Thank you, ' + firstName + '! 🌉\n\nWe will contact you within 24 hours to schedule your free consultation.\n\nFor immediate assistance, call (832) 264-1443.');
+                this.reset();
+                
+            } catch (error) {
+                alert('Thank you for your interest! We will contact you within 24 hours.\n\nOr call us directly at (832) 264-1443.');
+                this.reset();
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>

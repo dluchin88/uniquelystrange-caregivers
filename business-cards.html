@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniquely Strange Caregivers - Business Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Nunito Sans', sans-serif; background: #f0f0f0; padding: 40px; min-height: 100vh; }
+        
+        .print-instructions { max-width: 900px; margin: 0 auto 40px; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .print-instructions h1 { font-family: 'Cormorant Garamond', serif; color: #4A7C9B; margin-bottom: 15px; font-size: 28px; }
+        .print-instructions p { color: #5A6570; margin-bottom: 10px; line-height: 1.6; }
+        .print-instructions ul { margin-left: 20px; color: #5A6570; margin-bottom: 15px; }
+        .print-instructions li { margin-bottom: 5px; }
+        .print-instructions .highlight { background: #FFF8E7; border-left: 4px solid #E8923F; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        
+        .cards-container { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; max-width: 900px; margin: 0 auto; }
+        .card-wrapper { text-align: center; }
+        .card-wrapper h3 { color: #4A7C9B; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; }
+        
+        .business-card { width: 3.5in; height: 2in; background: #FFFFFF; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); overflow: hidden; }
+        
+        .card-front { background: linear-gradient(135deg, #F5F2ED 0%, #EBE6DE 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; height: 100%; position: relative; }
+        .card-front::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #4A7C9B 0%, #6A9CBD 50%, #E8923F 100%); }
+        
+        .logo-container { width: 160px; height: 80px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; }
+        .logo-container svg { max-width: 100%; max-height: 100%; }
+        
+        .tagline { font-size: 11px; color: #E8923F; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-top: 5px; }
+        .company-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #3D4852; font-weight: 600; margin-top: 8px; }
+        
+        .card-back { background: #FFFFFF; padding: 14px 18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; position: relative; }
+        .card-back::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #4A7C9B 0%, #E8923F 100%); }
+        
+        .card-back-header { display: flex; align-items: center; gap: 12px; padding-bottom: 10px; border-bottom: 2px solid #4A7C9B; }
+        .mini-logo { width: 45px; height: 45px; }
+        .person-info { flex: 1; }
+        .person-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #3D4852; line-height: 1.2; }
+        .person-title { font-size: 9px; color: #E8923F; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+        
+        .contact-info { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 8px 0; }
+        .contact-item { display: flex; align-items: center; gap: 10px; font-size: 9px; color: #3D4852; font-weight: 500; }
+        .contact-icon { color: #4A7C9B; font-size: 11px; width: 14px; text-align: center; }
+        
+        .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; border-top: 1px solid #EBE6DE; }
+        .trust-badges { display: flex; gap: 6px; }
+        .trust-badge { font-size: 7px; color: #4A7C9B; background: #F5F2ED; padding: 3px 6px; border-radius: 3px; font-weight: 600; }
+        .cta-text { font-size: 8px; color: #E8923F; font-weight: 700; }
+        
+        @media print { 
+            body { background: white; padding: 0.5in; } 
+            .print-instructions { display: none; } 
+            .business-card { box-shadow: none; border: 1px solid #ddd; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-instructions">
+        <h1>🌉 Business Card Print Template</h1>
+        <p><strong>Uniquely Strange Caregivers</strong> — Margaret Jones — Bridging the Gap</p>
+        
+        <div class="highlight">
+            <strong>Contact Information:</strong><br>
+            📞 Phone: (832) 264-1443<br>
+            ✉️ Email: support@uniquelystrangecaregivers.care<br>
+            🌐 Website: uniquelystrangecaregivers.care<br>
+            📍 Location: Houston, TX
+        </div>
+        
+        <p><strong>Specifications:</strong></p>
+        <ul>
+            <li>Standard US Business Card Size: 3.5" × 2"</li>
+            <li>Brand Colors: Blue (#4A7C9B) and Orange (#E8923F)</li>
+            <li>Print on thick cardstock (14pt or 16pt recommended)</li>
+        </ul>
+        
+        <p><strong>Print Services:</strong> Vistaprint, Moo, GotPrint, or local print shop</p>
+    </div>
+    
+    <div class="cards-container">
+        <div class="card-wrapper">
+            <h3>Front of Card</h3>
+            <div class="business-card card-front">
+                <div class="logo-container">
+                    <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 70 Q50 40 100 40 Q150 40 180 70" stroke="#4A7C9B" stroke-width="4" fill="none"/>
+                        <line x1="20" y1="70" x2="20" y2="85" stroke="#4A7C9B" stroke-width="4"/>
+                        <line x1="180" y1="70" x2="180" y2="85" stroke="#4A7C9B" stroke-width="4"/>
+                        <line x1="60" y1="52" x2="60" y2="85" stroke="#4A7C9B" stroke-width="3"/>
+                        <line x1="100" y1="40" x2="100" y2="85" stroke="#4A7C9B" stroke-width="3"/>
+                        <line x1="140" y1="52" x2="140" y2="85" stroke="#4A7C9B" stroke-width="3"/>
+                        <rect x="15" y="82" width="170" height="8" rx="2" fill="#4A7C9B"/>
+                        <circle cx="85" cy="35" r="8" fill="#E8923F"/>
+                        <circle cx="115" cy="35" r="8" fill="#4A7C9B"/>
+                        <ellipse cx="100" cy="50" rx="12" ry="6" fill="#E8923F" opacity="0.8"/>
+                        <path d="M100 15 C100 8 90 8 90 15 C90 22 100 28 100 28 C100 28 110 22 110 15 C110 8 100 8 100 15" fill="#E8923F"/>
+                    </svg>
+                </div>
+                <p class="tagline">✦ Bridging the Gap ✦</p>
+                <p class="company-name">Uniquely Strange Caregivers</p>
+            </div>
+        </div>
+        
+        <div class="card-wrapper">
+            <h3>Back of Card</h3>
+            <div class="business-card card-back">
+                <div class="card-back-header">
+                    <svg class="mini-logo" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" fill="#F5F2ED" stroke="#4A7C9B" stroke-width="2"/>
+                        <path d="M10 32 Q25 18 40 32" stroke="#4A7C9B" stroke-width="2.5" fill="none"/>
+                        <line x1="10" y1="32" x2="10" y2="38" stroke="#4A7C9B" stroke-width="2"/>
+                        <line x1="40" y1="32" x2="40" y2="38" stroke="#4A7C9B" stroke-width="2"/>
+                        <line x1="25" y1="20" x2="25" y2="38" stroke="#4A7C9B" stroke-width="2"/>
+                        <path d="M25 12 C25 8 20 8 20 12 C20 16 25 19 25 19 C25 19 30 16 30 12 C30 8 25 8 25 12" fill="#E8923F"/>
+                    </svg>
+                    <div class="person-info">
+                        <div class="person-name">Margaret Jones</div>
+                        <div class="person-title">Owner & Founder</div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>(832) 264-1443</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>support@uniquelystrangecaregivers.care</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <span>uniquelystrangecaregivers.care</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Serving Greater Houston, TX</span>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="trust-badges">
+                        <span class="trust-badge">✓ Licensed</span>
+                        <span class="trust-badge">✓ Insured</span>
+                        <span class="trust-badge">✓ Background-Checked</span>
+                    </div>
+                    <span class="cta-text">Free Consultation!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

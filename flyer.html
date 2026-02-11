@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniquely Strange Caregivers - Marketing Flyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Nunito Sans', sans-serif; background: #e0e0e0; padding: 40px; display: flex; flex-direction: column; align-items: center; }
+        
+        .print-instructions { max-width: 8.5in; background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .print-instructions h1 { font-family: 'Cormorant Garamond', serif; color: #4A7C9B; margin-bottom: 15px; }
+        .print-instructions p { color: #5A6570; margin-bottom: 8px; }
+        .print-instructions .highlight { background: #FFF8E7; border-left: 4px solid #E8923F; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        
+        .flyer { width: 8.5in; min-height: 11in; background: #FFFFFF; box-shadow: 0 10px 40px rgba(0,0,0,0.2); overflow: hidden; position: relative; }
+        
+        .flyer-header { background: linear-gradient(135deg, #4A7C9B 0%, #3A6A87 100%); padding: 35px 40px; color: white; position: relative; }
+        .flyer-header::after { content: ''; position: absolute; bottom: -20px; left: 0; right: 0; height: 40px; background: linear-gradient(135deg, #4A7C9B 0%, #3A6A87 100%); clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo-section { display: flex; align-items: center; gap: 20px; }
+        .logo-svg { width: 80px; height: 80px; background: white; border-radius: 50%; padding: 10px; display: flex; align-items: center; justify-content: center; }
+        .logo-svg svg { width: 100%; height: 100%; }
+        .company-info h1 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; margin-bottom: 5px; }
+        .tagline { font-size: 16px; color: #E8923F; font-weight: 600; letter-spacing: 0.1em; }
+        .phone-cta { text-align: right; }
+        .phone-label { font-size: 12px; opacity: 0.9; margin-bottom: 5px; }
+        .phone-number { font-size: 28px; font-weight: 700; color: #E8923F; }
+        
+        .hero-section { background: linear-gradient(135deg, #F5F2ED 0%, #EBE6DE 100%); padding: 50px 40px 40px; text-align: center; }
+        .hero-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #3D4852; margin-bottom: 15px; line-height: 1.2; }
+        .hero-section h2 span { color: #E8923F; }
+        .hero-section p { font-size: 18px; color: #5A6570; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        
+        .bridge-section { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; padding: 30px 40px; align-items: center; }
+        .bridge-side { background: white; border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid #4A7C9B; }
+        .bridge-side.orange { border-top-color: #E8923F; }
+        .bridge-side h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #4A7C9B; margin-bottom: 10px; }
+        .bridge-side.orange h3 { color: #E8923F; }
+        .bridge-side p { font-size: 14px; color: #5A6570; line-height: 1.5; }
+        .bridge-icon { font-size: 48px; color: #4A7C9B; }
+        
+        .services-section { padding: 30px 40px; background: white; }
+        .services-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #3D4852; text-align: center; margin-bottom: 25px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .service-item { text-align: center; padding: 20px 15px; background: #F5F2ED; border-radius: 10px; }
+        .service-icon { font-size: 32px; margin-bottom: 10px; }
+        .service-item h4 { font-size: 14px; color: #3D4852; margin-bottom: 8px; font-weight: 700; }
+        .service-item p { font-size: 12px; color: #5A6570; line-height: 1.4; }
+        
+        .why-section { background: linear-gradient(135deg, #4A7C9B 0%, #3A6A87 100%); padding: 30px 40px; color: white; }
+        .why-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; text-align: center; margin-bottom: 20px; }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .why-item { text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; }
+        .why-item .icon { font-size: 28px; margin-bottom: 8px; }
+        .why-item h4 { font-size: 13px; font-weight: 700; margin-bottom: 5px; }
+        .why-item p { font-size: 11px; opacity: 0.9; line-height: 1.3; }
+        
+        .cta-section { background: #E8923F; padding: 30px 40px; text-align: center; color: white; }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 20px; }
+        .contact-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; }
+        .contact-item .icon { font-size: 24px; }
+        
+        .footer { background: #3D4852; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; color: white; font-size: 12px; }
+        .trust-badges { display: flex; gap: 20px; }
+        .trust-badge { display: flex; align-items: center; gap: 5px; }
+        
+        @media print { body { background: white; padding: 0; } .print-instructions { display: none; } .flyer { box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    </style>
+</head>
+<body>
+    <div class="print-instructions">
+        <h1>🌉 Marketing Flyer Print Template</h1>
+        <p><strong>Uniquely Strange Caregivers</strong> — Bridging the Gap</p>
+        
+        <div class="highlight">
+            <strong>Contact Information:</strong><br>
+            📞 Phone: (832) 264-1443<br>
+            ✉️ Email: support@uniquelystrangecaregivers.care<br>
+            🌐 Website: uniquelystrangecaregivers.care<br>
+            📍 Location: Houston, TX
+        </div>
+        
+        <p><strong>Specifications:</strong> Letter size (8.5" × 11") | Full color</p>
+        <p><strong>Use for:</strong> Senior centers, doctor offices, hospitals, churches</p>
+    </div>
+    
+    <div class="flyer">
+        <div class="flyer-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-svg">
+                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 38 Q30 18 52 38" stroke="#4A7C9B" stroke-width="3" fill="none"/>
+                            <line x1="8" y1="38" x2="8" y2="48" stroke="#4A7C9B" stroke-width="3"/>
+                            <line x1="52" y1="38" x2="52" y2="48" stroke="#4A7C9B" stroke-width="3"/>
+                            <line x1="30" y1="22" x2="30" y2="48" stroke="#4A7C9B" stroke-width="2.5"/>
+                            <rect x="5" y="46" width="50" height="6" rx="2" fill="#4A7C9B"/>
+                            <path d="M30 10 C30 4 22 4 22 10 C22 16 30 22 30 22 C30 22 38 16 38 10 C38 4 30 4 30 10" fill="#E8923F"/>
+                        </svg>
+                    </div>
+                    <div class="company-info">
+                        <h1>Uniquely Strange Caregivers</h1>
+                        <p class="tagline">✦ BRIDGING THE GAP ✦</p>
+                    </div>
+                </div>
+                <div class="phone-cta">
+                    <p class="phone-label">Call for Free Consultation</p>
+                    <p class="phone-number">(832) 264-1443</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-section">
+            <h2>Compassionate Home Care for Those Who Deserve to Be <span>Understood</span></h2>
+            <p>We provide personalized non-medical home care that honors individuality, supports independence, and brings peace of mind to families across Greater Houston.</p>
+        </div>
+        
+        <div class="bridge-section">
+            <div class="bridge-side">
+                <h3>For Families</h3>
+                <p>Go to work with peace of mind knowing your loved one is safe, comfortable, and cared for by compassionate professionals.</p>
+            </div>
+            <div class="bridge-icon">🌉</div>
+            <div class="bridge-side orange">
+                <h3>For Patients</h3>
+                <p>Stay in your beloved home with personalized care that honors your routine, dignity, and quality of life.</p>
+            </div>
+        </div>
+        
+        <div class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item"><div class="service-icon">💬</div><h4>Companion Care</h4><p>Conversation, emotional support, activities, and meaningful connection</p></div>
+                <div class="service-item"><div class="service-icon">🛁</div><h4>Personal Care</h4><p>Bathing, dressing, grooming, and mobility assistance with dignity</p></div>
+                <div class="service-item"><div class="service-icon">🍽️</div><h4>Meal Preparation</h4><p>Nutritious meals and dietary support tailored to preferences</p></div>
+                <div class="service-item"><div class="service-icon">💊</div><h4>Medication Reminders</h4><p>Timely reminders to support health routines and wellness</p></div>
+                <div class="service-item"><div class="service-icon">🚗</div><h4>Transportation</h4><p>Safe rides to appointments, errands, and social outings</p></div>
+                <div class="service-item"><div class="service-icon">💜</div><h4>Respite Care</h4><p>Relief for family caregivers so they can rest and recharge</p></div>
+            </div>
+        </div>
+        
+        <div class="why-section">
+            <h2>Why Families Choose Us</h2>
+            <div class="why-grid">
+                <div class="why-item"><div class="icon">👤</div><h4>Personality Matched</h4><p>Caregivers matched by interests & compatibility</p></div>
+                <div class="why-item"><div class="icon">📋</div><h4>No Contracts</h4><p>Flexible scheduling with no long-term commitment</p></div>
+                <div class="why-item"><div class="icon">✅</div><h4>Vetted Caregivers</h4><p>Licensed, insured & background-checked team</p></div>
+                <div class="why-item"><div class="icon">❤️</div><h4>Personal Touch</h4><p>Owner-operated with hands-on oversight</p></div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Schedule Your Free Consultation Today!</h2>
+            <div class="contact-grid">
+                <div class="contact-item"><span class="icon">📞</span><span>(832) 264-1443</span></div>
+                <div class="contact-item"><span class="icon">✉️</span><span>support@uniquelystrangecaregivers.care</span></div>
+                <div class="contact-item"><span class="icon">🌐</span><span>uniquelystrangecaregivers.care</span></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="trust-badges">
+                <span class="trust-badge">✓ Licensed</span>
+                <span class="trust-badge">✓ Insured</span>
+                <span class="trust-badge">✓ Background-Checked</span>
+            </div>
+            <span>Serving Greater Houston, TX | Bridging the Gap with Compassionate Care</span>
+        </div>
+    </div>
+</body>
+</html>
